@@ -7,8 +7,9 @@ refs.form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit (event) {
 
-    event.currentTarget.email.value === '' || event.currentTarget.password.value === '' ?
-    alert('всі поля повинні бути заповнені') : event.preventDefault();
+    if (event.currentTarget.email.value === '' || event.currentTarget.password.value === ''){
+        alert('всі поля повинні бути заповнені');   
+    } else event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
     formData.forEach((value, name) => {
