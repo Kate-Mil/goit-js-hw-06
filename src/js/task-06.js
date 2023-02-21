@@ -3,10 +3,6 @@ const inputRef = document.querySelector('#validation-input');
 inputRef.addEventListener('blur', onInputBlur);
 
 function onInputBlur (event) { 
-   
-    console.log(event.currentTarget.value.length);
-    console.log(inputRef.dataset.length);
-
     
     if ( event.currentTarget.value.length === Number(inputRef.dataset.length)){  
         
