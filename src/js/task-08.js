@@ -6,12 +6,12 @@ refs.form.addEventListener('submit', onFormSubmit);
 
 
 function onFormSubmit (event) {
+    event.preventDefault();
 
     if (event.currentTarget.email.value === '' || event.currentTarget.password.value === ''){
         alert('всі поля повинні бути заповнені');   
-    } else event.preventDefault();
-
-    const formData = new FormData(event.currentTarget);
+    } else { 
+        const formData = new FormData(event.currentTarget);
     formData.forEach((value, name) => {
      console.log("name", name);
      console.log("value", value);
@@ -19,6 +19,6 @@ function onFormSubmit (event) {
 
     refs.form.reset();
 };
-
+}
 
 
